@@ -2,7 +2,7 @@
 using EpiserverSite1.Models.Pages;
 using System.Web.Mvc;
 
-namespace AlloyTraining.Controllers
+namespace EpiserverSite1.Controllers
 {
     public class StartPageController : PageController<StartPage>
     {

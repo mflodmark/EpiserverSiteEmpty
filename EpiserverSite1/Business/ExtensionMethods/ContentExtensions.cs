@@ -6,7 +6,7 @@ using EPiServer.ServiceLocation;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AlloyTraining.Business.ExtensionMethods
+namespace EpiserverTraining.Business.ExtensionMethods
 {
     /// <summary>
     /// Extension methods for content

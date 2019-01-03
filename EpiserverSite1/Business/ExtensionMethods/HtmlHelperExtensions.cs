@@ -3,6 +3,7 @@ using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc.Html;
 using EPiServer.Web.Routing;
+using EpiserverTraining.Business.ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.IO;
