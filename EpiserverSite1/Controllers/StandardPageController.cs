@@ -9,14 +9,16 @@ using EpiserverSite1.Models.Pages;
 
 namespace EpiserverSite1.Controllers
 {
-    public class StandardPageController : PageController<StandardPage>
+    public class StandardPageController : PageControllerBase<StandardPage>
     {
+        public StandardPageController(IContentLoader loader): base(loader)
+        {
+
+        }
+
         public ActionResult Index(StandardPage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
-
-            return View(currentPage);
+            return View(CreatePageViewModel(currentPage));
         }
     }
 }

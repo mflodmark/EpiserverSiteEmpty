@@ -1,21 +1,12 @@
-﻿@model EpiserverSite1.Models.Pages.StartPage
+﻿@model PageViewModel<EpiserverSite1.Models.Pages.StartPage>
+@using EpiserverSite1.Models.ViewModels;
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
+    @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
+</h1>
+@Html.PropertyFor(m => m.CurrentPage.MainBody)
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <h1 @Html.EditAttributes(m => m.Heading)>     
-        @(Model.Heading ?? Model.Name) </h1>
-        @Html.DisplayFor(m => m.MainBody)
-    </div>
-</body>
-</html>
+@Html.PropertyFor( m => m.CurrentPage.MainContentArea,
+    new {CssClass = "row equal-height"})
+

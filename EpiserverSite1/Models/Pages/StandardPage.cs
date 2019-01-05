@@ -7,23 +7,28 @@ using EPiServer.SpecializedProperties;
 
 namespace EpiserverSite1.Models.Pages
 {
-    [ContentType(DisplayName = "StandardPage", GUID = "f097d44f-0c66-44dd-ba8f-806ae3a5ca6f", Description = "")]
-    public class StandardPage : PageData
+    [ContentType(DisplayName = "Standard", 
+        GroupName = SiteGroupNames.Common,
+        Description = "Use this page type unless you need a more specialized one")]
+    [SitePageIcon]
+    [AvailableContentTypes(Include = new[] { typeof(StandardPage) }, 
+        Exclude = new[] { typeof(ProductPage)})]
+    public class StandardPage : SitePageData
     {
 
-        [CultureSpecific]
-        [Display(Name="Heading", 
-            Description = "Hej" ,
-            GroupName = SystemTabNames.Content, 
-            Order = 0)]
-        public virtual String Heading { get; set; }
+        //[CultureSpecific]
+        //[Display(Name="Heading", 
+        //    Description = "Hej" ,
+        //    GroupName = SystemTabNames.Content, 
+        //    Order = 0)]
+        //public virtual String Heading { get; set; }
 
         [CultureSpecific]
         [Display(
             Name = "Main body",
             Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
             GroupName = SystemTabNames.Content,
-            Order = 1)]
+            Order = 150)]
         public virtual XhtmlString MainBody { get; set; }
 
     }
