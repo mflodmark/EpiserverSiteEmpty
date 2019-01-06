@@ -218,11 +218,13 @@
   <ItemGroup>
     <Compile Include="Business\DependencyResolvers\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\DisplayChannels\MobileDisplayChannel.cs" />
     <Compile Include="Business\ExtensionMethods\ContentExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\HtmlHelperExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\LayoutExtensionMethods.cs" />
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
+    <Compile Include="Business\Initialization\DisplayOptionsInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\ThemeSelectionFactory.cs" />
     <Compile Include="Controllers\ContentFolderController.cs" />
@@ -232,6 +234,7 @@
     <Compile Include="Controllers\ProductPagePartialController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
+    <Compile Include="Controllers\StartPageMobileController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,11 +260,15 @@
     <Folder Include="Models\Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\iPhone4\device-320x480.png" />
+    <Content Include="ClientResources\iPhone4\iPhone4.css" />
     <Content Include="module.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ClientResources\Styles\help-text-icon.css" />
     <Content Include="ClientResources\Styles\widen-editors.css" />
     <Content Include="Resources\LanguageFiles\ContentTypes.xml" />
+    <Content Include="Resources\LanguageFiles\DisplayChannels.xml" />
+    <Content Include="Resources\LanguageFiles\DisplayOptions.xml" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -336,6 +343,7 @@
     <Content Include="Views\Shared\Full.cshtml" />
     <Content Include="Views\Shared\Narrow.cshtml" />
     <Content Include="Views\Shared\Wide.cshtml" />
+    <Content Include="Views\StartPageMobile\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

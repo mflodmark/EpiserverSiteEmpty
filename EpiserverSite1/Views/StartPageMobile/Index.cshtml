@@ -1,0 +1,14 @@
+﻿@model PageViewModel<EpiserverSite1.Models.Pages.StartPage>
+@using EpiserverSite1.Models.ViewModels;
+
+
+<h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
+    @(Model.CurrentPage.Heading ?? Model.CurrentPage.Name)
+</h1>
+@Html.PropertyFor(m => m.CurrentPage.MainBody)
+<ul>
+    @foreach (var item in Model.CurrentPage.MainContentArea.FilteredItems)
+    {
+        <li>@Html.ContentLink(item.ContentLink)</li>}
+</ul>
+

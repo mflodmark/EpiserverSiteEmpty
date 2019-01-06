@@ -1,5 +1,8 @@
 ﻿@using EpiserverSite1.Models.ViewModels
 @using EpiserverSite1.Models.Pages
+@using AlloyTraining
+@using EpiserverSite1
+
 @model PageViewModel<ProductPage>
 @{ Layout = "~/Views/Shared/Layouts/_RightRelatedContent.cshtml"; }
 <h1 @Html.EditAttributes(x => x.CurrentPage.Name)>
@@ -15,6 +18,9 @@
         @Html.PropertyFor(x => x.CurrentPage.MainBody)
     </div>
 </div>
+@Html.PropertyFor(m => m.CurrentPage.MainContentArea,
+    new { CssClass = "row equal-height", Tag = SiteTags.Wide })
+
 @section RelatedContent {
     <div @Html.EditAttributes(x => x.CurrentPage.PageImage)>
         <img src="@Url.ContentUrl(Model.CurrentPage.PageImage)" />
@@ -28,4 +34,7 @@
             {<span class="label label-inverse">@usp</span>}
         </p>
     </div>
+
+    @Html.PropertyFor(m => m.CurrentPage.RelatedContentArea,
+    new { CssClass = "row equal-height", Tag = SiteTags.Narrow })
 } 
