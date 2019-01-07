@@ -22,7 +22,7 @@ namespace EpiserverSite1.Controllers
 
     [TemplateDescriptor(Inherited = true,
         Tags = new[] { SiteTags.Wide },
-        AvailableWithoutTag = true)]
+        AvailableWithoutTag = false)]
     public class AllPagesWidePartialController : PartialContentController<SitePageData>
     {
         public override ActionResult Index(SitePageData currentPage)
@@ -36,7 +36,7 @@ namespace EpiserverSite1.Controllers
 
     [TemplateDescriptor(Inherited = true,
         Tags = new[] { SiteTags.Narrow },
-        AvailableWithoutTag = true)]
+        AvailableWithoutTag = false)]
     public class AllPagesNarrowPartialController : PartialContentController<SitePageData>
     {
         public override ActionResult Index(SitePageData currentPage)

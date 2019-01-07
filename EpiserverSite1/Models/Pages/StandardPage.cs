@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EpiserverSite1.Models.Blocks;
 
 namespace EpiserverSite1.Models.Pages
 {
@@ -30,6 +31,8 @@ namespace EpiserverSite1.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 150)]
         public virtual XhtmlString MainBody { get; set; }
+
+        public virtual EmployeeBlock Author { get; set; }
 
     }
 }
